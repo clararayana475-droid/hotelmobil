@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(189, 237, 215);
+    color: rgb(19, 40, 74);
+    padding: 16px;
+}
+/* configurando texto mobile */
+h1{
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid pink;
+    padding-bottom: 10px;
+}
+div{
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+    /* organização vertical mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* regra de mobile-imagem */
+div img{
+    /* não estoura a largura do celular */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+div h2{
+    font-size: 18px;
+    color: black;
+    margin-bottom: 8px;
+}
+div p{
+    font-size: 14px;
+    color: azure;
+}
+button{
+    background-color: aqua;
+    padding: 10px 18px;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 8px;
+}
+button:hoover{
+    background-color: antiquewhite;
+}
+h1{
+    font-size: 32px;
+    color: aqua;
+}
+#card{
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+}
+card img{
+    width: 40%;
+}
+
+/* Parte de desktop */
+/* media- configuração para determinado tamanho de tela */
+@media(min-width: 768px){
+    body{
+        padding: 40px;
+
+    }
+    h1{
+        font-size: 32px;
+        color: brown;
+    }
+}
