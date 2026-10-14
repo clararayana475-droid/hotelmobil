@@ -1,84 +1,245 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(189, 237, 215);
-    color: rgb(19, 40, 74);
-    padding: 16px;
+
+html {
+    scroll-behavior: smooth;
 }
-/* configurando texto mobile */
-h1{
-    font-size: 22px;
-    color: black;
+
+body {
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #15152B;
+}
+
+/* CABEÇALHO */
+header {
+    width: 100%;
+    min-height: 10vh;
+    padding: 20px;
+    background-color: #2e0860;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: #D8B4FE;
     text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid pink;
-    padding-bottom: 10px;
+    font-size: 32px;
 }
-div{
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    padding: 16px;
-    max-width: 800px;
-    margin: 0 auto;
-    /* organização vertical mobile */
+
+/* MENU */
+nav {
+    background-color: #3B176B;
+    width: 100%;
+    min-height: 10vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, serif;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #D8B4FE;
+    text-decoration: underline;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    width: 100%;
+    color: #D8B4FE;
+    background-color: #15152B;
+}
+
+main section {
+    border: solid 2px #50168d;
+    min-height: 100vh;
+    padding: 40px 30px;
+    scroll-margin-top: 20px;
+}
+
+main section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+main section h2 {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+/* IMAGENS */
+#fotos img {
+    width: 30%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 1%;
+}
+
+/* FORMULÁRIO */
+form {
+    max-width: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
-/* regra de mobile-imagem */
-div img{
-    /* não estoura a largura do celular */
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-}
-div h2{
+
+form label {
     font-size: 18px;
-    color: black;
-    margin-bottom: 8px;
-}
-div p{
-    font-size: 14px;
-    color: azure;
-}
-button{
-    background-color: aqua;
-    padding: 10px 18px;
-    color: #ffffff;
-    font-size: 14px;
-    border-radius: 8px;
-}
-button:hoover{
-    background-color: antiquewhite;
-}
-h1{
-    font-size: 32px;
-    color: aqua;
-}
-#card{
-    flex-direction: row;
-    align-items: center;
-    padding: 24px;
-}
-card img{
-    width: 40%;
 }
 
-/* Parte de desktop */
-/* media- configuração para determinado tamanho de tela */
-@media(min-width: 768px){
-    body{
-        padding: 40px;
+form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #50168d;
+    border-radius: 6px;
+    font-size: 16px;
+}
 
+form button {
+    padding: 14px;
+    margin-top: 10px;
+    background-color: #50168d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6d28a8;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #2e0860;
+    color: #D8B4FE;
+    padding: 30px 20px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+footer h2 {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+
+    header {
+        min-height: auto;
+        padding: 25px 15px;
     }
-    h1{
-        font-size: 32px;
-        color: brown;
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        min-height: auto;
+        padding: 15px 10px;
+        gap: 18px;
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    main section {
+        min-height: auto;
+        padding: 30px 18px;
+    }
+
+    main section h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    main section h2 {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    /* Uma imagem por linha */
+    #fotos img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        object-fit: cover;
+        margin: 20px auto;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    form label {
+        font-size: 16px;
+    }
+
+    form input {
+        padding: 14px;
+    }
+
+    form button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    footer h2 {
+        font-size: 14px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 380px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    main section {
+        padding: 25px 12px;
+    }
+
+    main section h1 {
+        font-size: 22px;
+    }
+
+    main section h2 {
+        font-size: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
     }
 }

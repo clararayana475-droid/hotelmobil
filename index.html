@@ -1,26 +1,122 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Hotel Transylvânia</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Titulo no mobile e desktop -->
-     <h1>Portal de Notícias Eleição</h1>
-     <div id="card">
 
-    
-     <img src="https://th.bing.com/th?id=OIF.k2D%2bZRQb76rTwZo1ZJCCSA&w=286&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+    <!-- CABEÇALHO -->
+    <header id="inicio">
+        <h1>Hotel Transylvânia</h1>
+    </header>
 
-     <div>
-        <h2>Lula para presidente</h2>
-        <p>A geração Z diz que vota no lula, cantando de forma repetitiva
-            "vai da pt vai dar, vai da pt vai dar" eu voto é no lula
-        </p>
-        <button>Votar no Lula</button>
-     </div>
-    </div>
+    <!-- MENU -->
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#reserva">Faça sua reserva</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#contatos">Contatos</a>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- SEÇÃO DE FOTOS -->
+        <section id="fotos">
+
+            <h1>Conheça o nosso Hotel</h1>
+
+            <h2>
+                O Hotel Transylvânia é um lugar único cercado por
+                mistério, diversão e criaturas incríveis.
+                Conheça nossos quartos, ambientes e tudo o que
+                o hotel tem para oferecer.
+            </h2>
+
+            <img
+                src="https://i.pinimg.com/736x/63/c0/66/63c066fc904d4a5ebe45adf7865dfb61.jpg"
+                alt="Vista do Hotel Transylvânia">
+
+            <img
+                src="https://i.pinimg.com/736x/cb/e7/2a/cbe72abe49a92b653f91cea10df27e94.jpg"
+                alt="Ambiente do Hotel Transylvânia">
+
+            <img
+                src="https://i.pinimg.com/736x/8e/cd/94/8ecd94dc4b9cf68155887c8efedb30fa.jpg"
+                alt="Interior do Hotel Transylvânia">
+
+        </section>
+
+        <!-- SEÇÃO DE RESERVA -->
+        <section id="reserva">
+
+            <h1>Faça sua reserva</h1>
+
+            <h2>
+                Reserve seu quarto no Hotel Transylvânia e venha
+                viver uma experiência assustadoramente divertida!
+            </h2>
+
+            <form>
+
+                <label for="nome">Nome:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required>
+
+                <label for="entrada">Data de entrada:</label>
+                <input
+                    type="date"
+                    id="entrada"
+                    name="entrada"
+                    required>
+
+                <label for="saida">Data de saída:</label>
+                <input
+                    type="date"
+                    id="saida"
+                    name="saida"
+                    required>
+
+                <label for="hospedes">Número de hóspedes:</label>
+                <input
+                    type="number"
+                    id="hospedes"
+                    name="hospedes"
+                    min="1"
+                    value="1"
+                    required>
+
+                <button type="submit">
+                    Fazer reserva
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer id="contatos">
+
+        <h2>Contato: 87968588283</h2>
+
+        <h2>Email: hoteltransilvania667</h2>
+
+    </footer>
+
 </body>
+
 </html>
